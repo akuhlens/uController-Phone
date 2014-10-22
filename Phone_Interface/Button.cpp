@@ -22,9 +22,9 @@ CharButton::CharButton(int x, int y, int width, int height, char* label, char va
     disp->locate(0,0);
 }
 
-CommandButton::CommandButton(int x, int y, int width, int height, int command, char* label, Command *ctl, SeeedStudioTFTv2 *disp) : Button(x, y, width, height, label, ctl, disp)
+CommandButton::CommandButton(int x, int y, int width, int height, commands cmd, char* label, Command *ctl, SeeedStudioTFTv2 *disp) : Button(x, y, width, height, label, ctl, disp)
 {
-    this->command = command;
+    this->command = cmd;
     disp->locate(0,0);
 }
           
