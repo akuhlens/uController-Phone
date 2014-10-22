@@ -24,6 +24,7 @@
 
 typedef enum{HALTED, RUNNING} run_state;
 typedef enum{OK, UNDEFINED_ERROR} error_status;
+typedef enum{GOTO_MENU, GOTO_DIALER, GOTO_TEXT_DIALER, GOTO_TEXTER, GOTO_VIEW_TEXTS, HANGUP_GOTO_MENU} commands;
 
 void fixpoint_orientation(point& p);
 
