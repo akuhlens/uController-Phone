@@ -1,5 +1,5 @@
 #include "Display.h"
-#include "Arial12x12.h"
+//#include "Arial12x12.h"
 
 Display::Display(int x, int y, int width, int height, Command *ctl, SeeedStudioTFTv2 *display){
     this->x = x;
@@ -23,7 +23,7 @@ void Display::draw(){
     display->locate(x+bordorWidth+5,y+bordorWidth+6);
     display->background(bgColor);
     display->foreground(fgColor);
-    display->set_font((unsigned char*) Arial12x12);
+    //display->set_font((unsigned char*) Arial12x12);
     display->printf("%s\n",content);
     //display->character(x+(width/2)-6,y+(height/2)-6,);
 }

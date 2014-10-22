@@ -1,6 +1,6 @@
 #include "Button.h"
 #include "Display.h"
-#include "Arial12x12.h"
+//#include "Arial12x12.h"
 
 Button::Button(int x, int y, int width, int height, char* label, Command *ctl, SeeedStudioTFTv2 *display){
     this->x = x;
@@ -34,7 +34,7 @@ void CharButton::draw(){
     display->locate(x+(width/2)-6,y+(height/2)-6);
     display->background(bgColor);
     display->foreground(fgColor);
-    display->set_font((unsigned char*) Arial12x12);
+    //display->set_font((unsigned char*) Arial12x12);
     display->printf("%s\n",label);
     display->locate(x+(width/2)-14,y+(height/2)+6);
     display->printf("%s\n",subValue);
@@ -47,7 +47,7 @@ void Button::draw(){
     display->locate(x+(width/2)-6,y+(height/2)-6);
     display->background(bgColor);
     display->foreground(fgColor);
-    display->set_font((unsigned char*) Arial12x12);
+    //display->set_font((unsigned char*) Arial12x12);
     display->printf("%s\n",label);
 }
 
@@ -92,7 +92,7 @@ void CharButton::touch(point& p){
    }
 }
 
-void ModeButton::touch(point& p){
+void CommandButton::touch(point& p){
     if ((x < p.x) && (p.x < (x + width)) &&  y < p.y && p.y < (y + height)){
         
         // invert the colors while the button is held
@@ -107,13 +107,13 @@ void ModeButton::touch(point& p){
         
         this->controller->sendInput(&c);
         
-        if(mode){
+        /*if(mode){
             mode = 0;
             label = "Text";
         }else{
             mode = 1;
             label = "Call";
-        }
+        }*/
         
         while(display->getPixel(p)); //spin until the key is unpressed
         bgColor = bg;

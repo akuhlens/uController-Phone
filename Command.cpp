@@ -1,5 +1,5 @@
 #include "Command.h" // implicitly "mbed.h", "SeeedStudioTFTv2.h"
-#include "Arial12x12.h"
+//#include "Arial12x12.h"
 #include "Button.h"
 #include "Dialer.h"
 
@@ -18,7 +18,7 @@ Command::Command(){
     
     
     //1.2 display splash screen 
-    screen.set_font((unsigned char*) Arial12x12);
+    //screen.set_font((unsigned char*) Arial12x12);
     int x, y;
     for(x = 0; x < X_MAX; x = x + 50){
       for(y = 0; y < Y_MAX; y = y + 15){
