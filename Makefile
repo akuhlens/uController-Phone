@@ -1,6 +1,3 @@
-
-# This needs to be fixed but it kinda works for now
-# just make sure that you are in the working test directory
 all:
 	git stash
 	git pull

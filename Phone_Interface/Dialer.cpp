@@ -13,7 +13,7 @@ Dialer::Dialer(Command *command, SeeedStudioTFTv2 *display): UserInterface(11 ,1
     CharButton *cb8 = new CharButton( 80, 200, 80, 60, "8", '0',"stu", command, display);
     CharButton *cb9 = new CharButton(160, 200, 80, 60, "9", '0',"vwx", command, display);
     //ModeButton *enter = new modeButton(50, 50, 50, 50, "Enter", command, display);
-    ModeButton *mode  = new ModeButton(0, 260, 79, 60, 0, "Text", command, display);
+    CommandButton *back  = new CommandButton(0, 260, 79, 60, GOTO_MENU, "Text", command, display);
     
     Display *disp = new Display(0,0,240,80,command,display);
     
@@ -30,7 +30,7 @@ Dialer::Dialer(Command *command, SeeedStudioTFTv2 *display): UserInterface(11 ,1
     drawable[8] = cb8;
     drawable[9] = cb9;
     drawable[10] = disp;
-    drawable[11] = mode;
+    drawable[11] = back;
     
     touchable[0] = cb0;
     touchable[1] = cb1;
@@ -42,7 +42,7 @@ Dialer::Dialer(Command *command, SeeedStudioTFTv2 *display): UserInterface(11 ,1
     touchable[7] = cb7;
     touchable[8] = cb8;
     touchable[9] = cb9;
-    touchable[10] = mode;
+    touchable[10] = back;
     
     writeable[0] = disp;
 }
